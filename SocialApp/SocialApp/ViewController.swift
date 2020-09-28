@@ -19,8 +19,7 @@ class ViewController: UIViewController {
         // Получаем размер клавиатуры
         let info = notification.userInfo! as NSDictionary
         let kbSize = (info.value(forKey: UIResponder.keyboardFrameEndUserInfoKey) as! NSValue).cgRectValue.size
-        // Параметр kbSize.height делится на 2 для лучшего отображения на маленьких экранах
-        let contentInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: kbSize.height/2, right: 0.0)
+        let contentInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: kbSize.height, right: 0.0)
         
         // Добавляем отступ внизу UIScrollView, равный размеру клавиатуры
         self.scroller?.contentInset = contentInsets
