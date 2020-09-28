@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -26,8 +25,8 @@
                                 <color key="textColor" red="0.99361294509999998" green="0.56915956739999995" blue="0.1126302257" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <scrollView verifyAmbiguity="off" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" contentInsetAdjustmentBehavior="scrollableAxes" translatesAutoresizingMaskIntoConstraints="NO" id="RJ7-kb-uZe">
-                                <rect key="frame" x="0.0" y="39" width="414" height="818"/>
+                            <scrollView verifyAmbiguity="off" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentInsetAdjustmentBehavior="scrollableAxes" translatesAutoresizingMaskIntoConstraints="NO" id="RJ7-kb-uZe">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="dLR-uh-3fQ">
                                         <rect key="frame" x="20" y="234.5" width="374" height="349"/>
@@ -113,39 +112,19 @@
             </objects>
             <point key="canvasLocation" x="-1197" y="-190"/>
         </scene>
-        <!--Друзья-->
-        <scene sceneID="J9y-6p-bh5">
+        <!--Лента-->
+        <scene sceneID="qTQ-Ts-iL3">
             <objects>
-                <collectionViewController id="mdL-kh-xMF" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="qv5-9J-ST5">
+                <viewController id="XMS-v8-vVb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vWg-R9-POX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="tintColor" red="0.99361294509999998" green="0.56915956739999995" blue="0.1126302257" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="QG9-VD-ruE">
-                            <size key="itemSize" width="128" height="128"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="1s5-0t-OUb">
-                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ssT-bI-g7A">
-                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </collectionViewCellContentView>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="mdL-kh-xMF" id="jL7-eI-MAu"/>
-                            <outlet property="delegate" destination="mdL-kh-xMF" id="2Ie-E4-wS8"/>
-                        </connections>
-                    </collectionView>
-                    <tabBarItem key="tabBarItem" title="Друзья" image="person.3" catalog="system" id="rm9-9n-0yP"/>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jCc-Dt-CL7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <viewLayoutGuide key="safeArea" id="4aS-Me-SbB"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Лента" image="square.fill.text.grid.1x2" catalog="system" id="6X8-aK-3li"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sdl-n5-7IT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-365" y="542"/>
         </scene>
@@ -169,19 +148,54 @@
         <!--Профиль-->
         <scene sceneID="aJq-va-ZAk">
             <objects>
-                <viewController id="40a-2M-6jC" sceneMemberID="viewController">
+                <viewController id="40a-2M-6jC" customClass="MainViewController" customModule="SocialApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="utp-XU-n6a">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zn4-yR-TbD">
+                                <rect key="frame" x="0.0" y="44" width="414" height="170"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Wonder-Day-Ava-25" translatesAutoresizingMaskIntoConstraints="NO" id="4rX-4m-LWE">
+                                        <rect key="frame" x="20" y="20" width="150" height="150"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Всякая Всячина: Возможно даже оформленная каким то образом." id="RhD-2D-1Q2">
+                                        <rect key="frame" x="178" y="78" width="200" height="92"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Имя Профиля" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UwM-aL-JHI">
+                                        <rect key="frame" x="178" y="20" width="200" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="30"/>
+                                        <color key="textColor" red="0.99361294509999998" green="0.56915956739999995" blue="0.1126302257" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="170" id="38Q-C0-8wi"/>
+                                    <constraint firstAttribute="width" priority="750" constant="414" id="kdO-6R-IgF"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="SSO-Bv-pbZ"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" red="0.99361294509999998" green="0.56915956739999995" blue="0.1126302257" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Zn4-yR-TbD" firstAttribute="leading" secondItem="SSO-Bv-pbZ" secondAttribute="leading" id="4Bw-CG-HKr"/>
+                            <constraint firstItem="Zn4-yR-TbD" firstAttribute="trailing" secondItem="SSO-Bv-pbZ" secondAttribute="trailing" id="Hnc-fH-rxA"/>
+                            <constraint firstItem="Zn4-yR-TbD" firstAttribute="top" secondItem="SSO-Bv-pbZ" secondAttribute="top" id="PZ2-Cg-dvF"/>
+                            <constraint firstItem="Zn4-yR-TbD" firstAttribute="centerX" secondItem="utp-XU-n6a" secondAttribute="centerX" id="XGT-cC-Ebp"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Профиль" image="person.fill" catalog="system" id="9lh-U2-c03"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UCy-bc-dtm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="372" y="-190"/>
+            <point key="canvasLocation" x="371.01449275362324" y="-190.17857142857142"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="L86-4K-iIv">
@@ -194,9 +208,9 @@
                         <color key="selectedImageTintColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="40a-2M-6jC" kind="relationship" relationship="viewControllers" id="pCV-e9-ia1"/>
-                        <segue destination="mdL-kh-xMF" kind="relationship" relationship="viewControllers" id="bpK-ye-jrv"/>
+                        <segue destination="XMS-v8-vVb" kind="relationship" relationship="viewControllers" id="kHf-2A-UcB"/>
                         <segue destination="vYz-wa-NTX" kind="relationship" relationship="viewControllers" id="7co-6Q-zJD"/>
+                        <segue destination="40a-2M-6jC" kind="relationship" relationship="viewControllers" id="pCV-e9-ia1"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KRk-gS-4gU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -205,10 +219,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Wonder-Day-Ava-25" width="322" height="322"/>
         <image name="note.text.badge.plus" catalog="system" width="128" height="108"/>
-        <image name="person.3" catalog="system" width="128" height="62"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="pixil-frame-0-4" width="50" height="50"/>
+        <image name="square.fill.text.grid.1x2" catalog="system" width="128" height="100"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

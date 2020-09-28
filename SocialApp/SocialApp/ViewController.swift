@@ -77,7 +77,7 @@ class ViewController: UIViewController {
         func checkUserData() -> Bool {
             guard let login = loginInput.text,
                 let password = passwordInput.text else { return false }
-            if login == "admin" && password == "123456" {
+            if login == "q" && password == "q" {
                 return true
             } else {
                 return false
@@ -98,6 +98,7 @@ class ViewController: UIViewController {
 
     // Нажатие на кнопку "Вход"
     @IBAction func loginButtomPressed(_ sender: Any){
+        
     }
     
 }
