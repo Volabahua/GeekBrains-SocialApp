@@ -14,6 +14,7 @@
 		E7172C1C2520325000BB718A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7172C1B2520325000BB718A /* Assets.xcassets */; };
 		E7172C1F2520325000BB718A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7172C1D2520325000BB718A /* LaunchScreen.storyboard */; };
 		E7DD6D4D252266000090A451 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DD6D4C252266000090A451 /* MainViewController.swift */; };
+		E7DD6D5625229B440090A451 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DD6D5525229B440090A451 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		E7172C1E2520325000BB718A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E7172C202520325000BB718A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7DD6D4C252266000090A451 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		E7DD6D5525229B440090A451 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,14 +62,23 @@
 			children = (
 				E7172C122520324E00BB718A /* AppDelegate.swift */,
 				E7172C142520324E00BB718A /* SceneDelegate.swift */,
-				E7172C162520324E00BB718A /* ViewController.swift */,
-				E7DD6D4C252266000090A451 /* MainViewController.swift */,
+				E7DD6D5325229AFA0090A451 /* Controllers */,
 				E7172C182520324E00BB718A /* Main.storyboard */,
 				E7172C1B2520325000BB718A /* Assets.xcassets */,
 				E7172C1D2520325000BB718A /* LaunchScreen.storyboard */,
 				E7172C202520325000BB718A /* Info.plist */,
 			);
 			path = SocialApp;
+			sourceTree = "<group>";
+		};
+		E7DD6D5325229AFA0090A451 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E7172C162520324E00BB718A /* ViewController.swift */,
+				E7DD6D4C252266000090A451 /* MainViewController.swift */,
+				E7DD6D5525229B440090A451 /* LoginViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +154,7 @@
 				E7172C172520324E00BB718A /* ViewController.swift in Sources */,
 				E7172C132520324E00BB718A /* AppDelegate.swift in Sources */,
 				E7172C152520324E00BB718A /* SceneDelegate.swift in Sources */,
+				E7DD6D5625229B440090A451 /* LoginViewController.swift in Sources */,
 				E7DD6D4D252266000090A451 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

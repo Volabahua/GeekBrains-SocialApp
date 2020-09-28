@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController {
    //Объявляем скроллер для вложенного контента
     @IBOutlet weak var scroller: UIScrollView!
     // Когда клавиатура появляется
