@@ -14,10 +14,19 @@
                 <viewController id="ZCx-1A-wWn" customClass="ViewController" customModule="SocialApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fPq-5P-xZv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <scrollView verifyAmbiguity="off" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentInsetAdjustmentBehavior="scrollableAxes" translatesAutoresizingMaskIntoConstraints="NO" id="RJ7-kb-uZe">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="flippy fox:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DeB-px-NsP">
+                                <rect key="frame" x="94.5" y="54" width="225" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="225" id="VsO-05-pQr"/>
+                                    <constraint firstAttribute="height" constant="100" id="yrv-wi-XG8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="40"/>
+                                <color key="textColor" red="0.99361294509999998" green="0.56915956739999995" blue="0.1126302257" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <scrollView verifyAmbiguity="off" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" contentInsetAdjustmentBehavior="scrollableAxes" translatesAutoresizingMaskIntoConstraints="NO" id="RJ7-kb-uZe">
+                                <rect key="frame" x="0.0" y="39" width="414" height="818"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="dLR-uh-3fQ">
                                         <rect key="frame" x="20" y="234.5" width="374" height="349"/>
@@ -49,21 +58,25 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QQV-uN-3SI">
-                                                <rect key="frame" x="137" y="299" width="100" height="50"/>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QQV-uN-3SI">
+                                                <rect key="frame" x="112" y="299" width="150" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="fta-7n-lDT"/>
-                                                    <constraint firstAttribute="width" constant="100" id="nd9-B9-giP"/>
+                                                    <constraint firstAttribute="width" constant="150" id="nd9-B9-giP"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="30"/>
                                                 <state key="normal" title="Войти">
-                                                    <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                                    <color key="titleColor" red="0.99361294509999998" green="0.56915956739999995" blue="0.1126302257" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="loginButtomPressed:" destination="ZCx-1A-wWn" eventType="touchUpInside" id="TvA-jw-7TT"/>
                                                 </connections>
                                             </button>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="3qh-HL-zYG" firstAttribute="top" secondItem="H1n-Bh-reO" secondAttribute="bottom" constant="27" id="C57-Ka-crW"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <constraints>
@@ -82,7 +95,9 @@
                             <constraint firstItem="RJ7-kb-uZe" firstAttribute="centerX" secondItem="U8T-aC-VCO" secondAttribute="centerX" id="03K-cR-EsV"/>
                             <constraint firstItem="RJ7-kb-uZe" firstAttribute="trailing" secondItem="U8T-aC-VCO" secondAttribute="trailing" id="5ph-o5-szT"/>
                             <constraint firstItem="RJ7-kb-uZe" firstAttribute="leading" secondItem="U8T-aC-VCO" secondAttribute="leading" id="6JY-tK-Y7D"/>
+                            <constraint firstItem="DeB-px-NsP" firstAttribute="centerX" secondItem="fPq-5P-xZv" secondAttribute="centerX" id="QvJ-eG-hau"/>
                             <constraint firstItem="RJ7-kb-uZe" firstAttribute="centerY" secondItem="U8T-aC-VCO" secondAttribute="centerY" id="Rc1-od-x5z"/>
+                            <constraint firstItem="DeB-px-NsP" firstAttribute="top" secondItem="U8T-aC-VCO" secondAttribute="top" constant="10" id="s89-bL-Adt"/>
                         </constraints>
                     </view>
                     <connections>
@@ -93,7 +108,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tih-wt-RUr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-904" y="-189"/>
+            <point key="canvasLocation" x="-904.34782608695662" y="-189.50892857142856"/>
         </scene>
     </scenes>
     <resources>
