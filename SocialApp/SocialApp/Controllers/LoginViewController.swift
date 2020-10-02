@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
    //Объявляем скроллер для вложенного контента
     @IBOutlet weak var scroller: UIScrollView!
     // Когда клавиатура появляется
@@ -35,12 +35,17 @@ class LoginViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
             super.viewWillAppear(animated)
+        
+            //Внешний вид кнопок enter в текстовых полях
+            loginInput.returnKeyType = .next
+            passwordInput.returnKeyType = .done
+    
             // Подписываемся на два уведомления: одно приходит при появлении клавиатуры
             NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWasShown), name: UIResponder.keyboardWillShowNotification, object: nil)
             // Второе — когда она пропадает
             NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillBeHidden(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
         }
-    
+
     @objc func hideKeyboard() {
             self.scroller?.endEditing(true)
         }
@@ -50,7 +55,22 @@ class LoginViewController: UIViewController {
     // Текстовое поле пароля
     @IBOutlet weak var passwordInput: UITextField!
    
+    //Текстовое поле выбирается после нажатия enter после заполнения пароля клавиатура исчезает
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool
+        {
+        switch textField
+            {
+            case loginInput:
+                passwordInput.becomeFirstResponder()
+            case passwordInput:
+                passwordInput.resignFirstResponder()
+            default:
+                passwordInput.resignFirstResponder()
+            }
+            return true
+        }
     
+    //Загрузка основного экрана
     override func viewDidLoad() {
             super.viewDidLoad()
             // Жест нажатия
@@ -58,7 +78,6 @@ class LoginViewController: UIViewController {
             // Присваиваем его UIScrollVIew
             scroller?.addGestureRecognizer(hideKeyboardGesture)
         }
-    
     
     // Переход к приложению при правильно указанном логине и пароле
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
@@ -97,7 +116,6 @@ class LoginViewController: UIViewController {
 
     // Нажатие на кнопку "Вход"
     @IBAction func loginButtomPressed(_ sender: Any){
-        
     }
     
 }
