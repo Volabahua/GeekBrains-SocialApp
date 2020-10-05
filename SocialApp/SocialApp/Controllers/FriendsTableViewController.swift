@@ -20,26 +20,33 @@ class FriendsTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-
+    
+    let friendsArray: [Friend] = [
+        Friend(name: "Charlie Scene", age: 20, photo: "charlie scene"),
+        Friend(name: "Danny", age: 20, photo: "danny"),
+        Friend(name: "Funny Man", age: 20, photo: "funny man"),
+        Friend(name: "J-Dog", age: 20, photo: "j-dog"),
+        Friend(name: "Johnny 3 Tears", age: 20, photo: "johnny 3 tears")]
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return friendsArray.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "friendsCell") as! FriendsTableViewCell
+        cell.friendPhoto.image = UIImage(named: friendsArray[indexPath.row].photo)
+        cell.nameLabel.text = friendsArray[indexPath.row].name
+        cell.ageLabel.text = String(friendsArray[indexPath.row].age)
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
