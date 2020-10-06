@@ -6,3 +6,9 @@
 //
 
 import Foundation
+import UIKit
+
+struct Group {
+    var groupName:String
+    var groupImageName:String
+}
