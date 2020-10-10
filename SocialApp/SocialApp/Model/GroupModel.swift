@@ -9,6 +9,6 @@ import Foundation
 import UIKit
 
 struct Group {
-    var groupName:String
-    var groupImageName:String
+    var groupName: String
+    var groupImage: UIImage
 }

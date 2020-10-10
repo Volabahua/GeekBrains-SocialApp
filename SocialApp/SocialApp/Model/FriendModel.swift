@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 struct Friend {
-    var name:String
-    var age:Int
-    var photo:String
+    var friendName:String
+    var friendAge:Int
+    var friendPhoto:UIImage
 }
