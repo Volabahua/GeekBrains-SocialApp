@@ -58,6 +58,7 @@
                                     <outlet property="groupImage" destination="cwE-f5-c89" id="PNi-xE-wwP"/>
                                     <outlet property="groupLabel" destination="Oee-Uq-kHQ" id="vd1-6g-O8r"/>
                                     <segue destination="4rQ-d7-2ZK" kind="unwind" trigger="accessoryAction" unwindAction="unwindToViewController1WithSegue:" id="nRL-EV-Q4Q"/>
+                                    <segue destination="4rQ-d7-2ZK" kind="unwind" identifier="addGroup" unwindAction="addGroupWithSegue:" id="BrC-PJ-I84"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

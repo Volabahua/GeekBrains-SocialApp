@@ -48,4 +48,16 @@ class GroupsViewController: UITableViewController {
         return cell
     }
 
+    @IBAction func addGroup(segue: UIStoryboardSegue) {
+            if segue.identifier == "addGroup" {
+                guard let destination = segue.source as? AllGroupsTableViewController else { return }
+                if let indexPath = destination.tableView.indexPathForSelectedRow {
+                    let group = destination.allGroupsArray[indexPath.row]
+                    userGroupsArray.append(group)
+                    tableView.reloadData()
+                }
+            }
+        }
+
+    
 }
