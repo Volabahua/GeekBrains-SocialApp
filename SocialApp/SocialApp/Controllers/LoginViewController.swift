@@ -8,8 +8,10 @@
 import UIKit
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
+    
    //Объявляем скроллер для вложенного контента
     @IBOutlet weak var scroller: UIScrollView!
+    
     // Когда клавиатура появляется
     @objc func keyboardWasShown(notification: Notification) {
         // Получаем размер клавиатуры
@@ -20,6 +22,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         self.scroller?.contentInset = contentInsets
         scroller?.scrollIndicatorInsets = contentInsets
     }
+    
     //Когда клавиатура исчезает
     @objc func keyboardWillBeHidden(notification: Notification) {
         // Устанавливаем отступ внизу UIScrollView, равный 0
